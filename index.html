@@ -1,69 +1,100 @@
 <!DOCTYPE HTML>
 <!--
-	Highlights by HTML5 UP
+	Massively by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>The Transiting Exoplanet Community Early Release Science Program for JWST</title>
+		<title>
+			The Transiting Exoplanet Community Early Release Science Program for JWST
+		</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53205207-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-53205207-2');
+		</script>
 	</head>
-	<body>
 
-		<!-- Header -->
-			<section id="header">
-				<header class="major">
-					<h1>Transiting Exoplanets with JWST</h1>
-					<p>A community-led Early Release Science Program</p>
-				</header>
-			</section>
+	<!-- ZKBT: this style is a kludge to make the hexagon logo not have a dotted line under it -->
+	<style>
+	a[class="image-link"] {
+		text-decoration: none !important;
+		outline: 0;
+		border: 0;
+		}
+	</style>
 
-		<!-- One -->
-			<section id="one" class="main special">
-				<div class="container">
-					<div class="content">
-						<header class="major">
-							<h1>JWST Early Release Science Program #1366</h1>
-						</header>
+	<body class="is-preload">
 
-					"The Transiting Exoplanet Community Early Release Science Program" is an accepted <a href='https://jwst.stsci.edu/news-events/news/News%20items/selections-made-for-the-jwst-directors-discretionary-early-release-science-program'>Early Release Science</a> program for the <a href='https://jwst.stsci.edu'>James Webb Space Telescope (JWST)</a>.</p>
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
 
-						<!--<p><b>This website is a placeholder</b>, but it will be expanded soon to describe the details of this program in more detail. .</p>!-->
-
-						<header class="major">
-							<h1>Resources</h1>
-						</header>
-						<ul align='left'>
-							<li>The goals and design of the science program are summarized in <a href='https://ui.adsabs.harvard.edu/abs/2018PASP..130k4402B/abstract'>Bean et al. (2018)</a>.</li>
-
-							<li>A basic description and the Astronomer's Proposal Tool file can be found at <a href='https://jwst.stsci.edu/observing-programs/program-information?id=1366'>ERS #1366 Program Information</a>.</li>
-							<li>The current version of the Science Council Charter is available <a href='documents/science-council-charter.pdf'>here</a>.</li>
-						</ul>
+				<!-- Intro -->
+					<div id="intro">
+						<a href=#ers-transit class="image-link">
+							<img src="images/hex-transit.svg" alt="logo with transit light curve over hexagonal JWST mirror" style="width:50%">
+							<br><br><br><br>
+						</a>
 					</div>
-				</div>
-			</section>
 
-			<!-- Header -->
-				<section id="footer">
-					<footer>
-						<ul class="copyright">
-							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				<!-- Header -->
+					<a name='ers-transit'>
+					<header id="header">
+						<a href="index.html" class="logo">ers-transit</a>
+					</header>
+
+				<!-- Nav -->
+					<!-- ZKBT: You need to copy/paste to propagate any changes
+					to this main menu throughout all the main pages.-->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html#ers-transit">About</a></li>
+							<li><a href="workshops.html#ers-transit">Workshops</a></li>
+							<li><a href="resources.html#ers-transit">Resources</a></li>
+							<li><a href="contact.html#ers-transit">Contact</a></li>
 						</ul>
-					</footer>
-				</section>
+						<ul class="icons">
+							<li><a href="https://github.com/ers-transit" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Posts -->
+						<section>
+								<article>
+									<p>
+										<b><a href='http://www.stsci.edu/jwst/observing-programs/approved-ers-programs/program-1366'>The Transiting Exoplanet Community Early Release Science Program</a></b> is an accepted <a href='https://jwst-docs.stsci.edu/jwst-opportunities-and-policies/jwst-director-s-discretionary-early-release-science-call-for-proposals'>Early Release Science (ERS)</a> program for the <a href='https://jwst.stsci.edu'>James Webb Space Telescope (JWST)</a>. It aims to provide the astronomical community with publicly-available transit datasets and analysis toolkits as soon as possible after JWST's launch, as well as to help coordinate collaborations centered on learning how to make the most of JWST for studying exoplanet atmospheres. Details about the motivation, strategy, and expected results of the program can be found in <a href='https://ui.adsabs.harvard.edu/abs/2018PASP..130k4402B/abstract'>Bean et al. (2018)</a>.
+									</p>
+								</article>
+							</section>
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Zach Berta-Thompson + ers-transit team</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 
 	</body>
