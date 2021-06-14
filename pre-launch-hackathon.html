@@ -1,0 +1,439 @@
+<!DOCTYPE HTML>
+<!--
+Massively by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+  <title>
+    The Transiting Exoplanet Community Early Release Science Program for JWST
+  </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53205207-2"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-53205207-2');
+  </script>
+</head>
+<body class="is-preload">
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Header -->
+    <a name='ers-transit' />
+    <header id="header">
+      <a href="index.html" class="logo">ers-transit</a>
+    </header>
+
+    <!-- Nav -->
+    <!-- ZKBT: You need to copy/paste to propagate any changes
+    to this main menu throughout all the main pages.-->
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="index.html#ers-transit">About</a></li>
+        <li><a href="code-of-conduct.html#ers-transit">Code of Conduct</a></li>
+        <li class="active"><a href="workshops.html#ers-transit">Workshops</a></li>
+        <li><a href="talks.html#ers-transit">Talks</a></li>
+        <li><a href="resources.html#ers-transit">Resources</a></li>
+        <li><a href="contact.html#ers-transit">Contact</a></li>
+      </ul>
+      <ul class="icons">
+        <li><a href="https://github.com/ers-transit" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+
+      <!-- Post -->
+      <section class="post">
+
+        <p><span class="image right"><img src="images/hex-community.svg" align="top" alt="logo with cartoon people over hexagonal JWST mirror" /></span>
+          <p>The <b>ERS Pre-Launch Data Hackathon</b> will be a remote workshop concentrated into the <b>week of 21-25 June 2021</b>. The core focus of this workshop will be on analyzing transiting exoplanet datasets from JWST, particularly how we go from pixels downloaded from the telescope to reliable time-series stellar spectra, and how we go from those time series to fitted planetary features like transmission or emission spectra. This workshop will be structured with approximately 2 hours per day of live zoom talks/tutorials and the rest of each day devoted to additional off-zoom coding or learning exercises.</p>
+        </section>
+
+        <section class="post">
+          <a name='code-of-conduct'></a>
+          <h3>Code of Conduct</h3>
+          All participants in the ERS Pre-Launch Data Hackathon must agree to the <a href="code-of-conduct.html">ERS Code of Conduct</a>. If you have not done so already, please confirm your commitment to this code of conduct using <a href=https://forms.gle/Eb9hnpr1MKqskVd46 target="_blank">this google form</a>.
+        </section>
+
+        <section class="post">
+          <a name='data-and-computing'></a>
+          <h3>Data and Computing Resources</h3>
+          <ul>
+            <li>
+              Simulated pixel-level data for all four JWST (NIRISS, NIRSpec, NIRCam, MIRI) instruments are available for download <a href=?>here.</a>
+            </li>
+            <li>
+              Materials for the Guided Tutorials are available for download <a href=?>here</a>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="post">
+          <a name='agenda'></a>
+          <h3>Agenda + Meeting Logistics</h3>
+          <p>The agenda for the Pre-Launch Data Hackathon is listed below. All talks and Guided Tutorials will be held over zoom, with the connection information sent out to registered participants. We have a slack workspace that will be open to all registered participants to serve as a tool for communication and conversation beyond the zoom sessions.</p>
+
+          <table>
+            <tr>
+              <th colspan="2">
+                <h3><br>Day 0 | Monday, June 21, 2021</h3>
+              </th>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <i>This optional “Day 0” of the meeting is designed to introduce foundational concepts necessary for studying transiting exoplanets with JWST and other telescopes. If you are new to the community, haven’t worked much with observations of transiting exoplanets, or want a refresher on basic transiting exoplanet concepts, please join for this day. If the topics below feel too basic or too much of a review to be useful for you, please feel very free to skip! We aim for this to be a particularly friendly space for junior scientists and new community members to learn basics and ask lots of questions.</i>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Monday</b><br>
+                8:00am PT<br>
+                11:00am ET<br>
+                5:00pm CEST<br>
+              </td>
+              <td>
+                <i>Talk:</i>
+                <b>How do we study the atmospheres of transiting exoplanets?</b><br>
+                <u>David Sing</u>
+                <i>(40 + 20 minutes for discussion)</i><br>
+
+                <ul>
+                  <li>What are the basic signals we can observe (transit, eclipse, phase curve)?</li>
+                  <li>What can we learn from them? What have we learned from them before JWST?</li>
+                  <li>How does photon noise affect observations of transiting planets?</li>
+                  <li>What are other instrumental or astrophysical sources of noise to be aware of?</li>
+                </ul>
+
+                <i>Questions are encouraged in the chat and following the talk, with experienced exoplanet folks available online to discuss. The talk will be followed by further small-group discussions in breakout rooms.</i>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <center><i>5 minute break</i></center>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Monday</b><br>
+                9:05am PT<br>
+                12:05pm ET<br>
+                6:05pm CEST<br>
+              </td>
+              <td>
+                <i>Guided Tutorial:</i>
+                <b>How do we get started working with JWST data during this hackathon?</b><br>
+                <u>Zach Berta-Thompson</u>
+                <i>(30 minutes + open-ended follow-up afterward)</i>
+
+                <ul>
+                  <li>Installing anaconda python.</li>
+                  <li>Creating an ers-transit conda environment.</li>
+                  <li>Using jupyter notebooks.</li>
+                  <li>Using python packages and modules.</li>
+                  <li>Downloading simulated data.</li>
+                  <li>Testing on a single pixel.</li>
+                </ul>
+
+                <i>Folks will be standing by and ready to step into breakout rooms to help with any questions or technical difficulties, big or small.</i>
+              </td>
+            </tr>
+            <tr>
+              <th colspan="2">
+                <h3><br>Day 1 | Tuesday, June 22, 2021</h3>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <b>Tuesday</b><br>
+                8:00am PT<br>
+                11:00am ET<br>
+                5:00pm CEST<br>
+              </td>
+              <td>
+                <i>Talk:</i>
+                <b>Welcome + overview!</b><br>
+                <u>Natalie Batalha</u>
+                <i>(15 + 5 minutes for questions)</i>
+
+                <ul>
+                  <li>What is the ERS program?</li>
+                  <li>What science and datasets are we enabling?</li>
+                  <li>What are our community goals?</li>
+                </ul>
+
+                <i>Talk:</i>
+                <b>What should we expect when we download JWST data?</b><br>
+                <u>Néstor Espinoza</u>
+                <i>(30 + 10 minutes)</i>
+
+                <ul>
+                  <li>What are the basics we should know about each JWST instrument (NIRISS, NIRCam, NIRSpec, MIRI)?</li>
+                  <li>What does the pipeline do? What will pipeline data products look like?</li>
+                  <li>What should we and should we not expect from STScI?</li>
+                </ul>
+
+                <i>Questions are encouraged in the chat and following the talks.</i>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <center><i>5 minute break</i></center>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Tuesday</b><br>
+                9:05am PT<br>
+                12:05pm ET<br>
+                6:05pm CEST<br>
+              </td>
+              <td>
+                <i>Hack Projects:</i>
+                <b>What are folks excited to work on this week?</b><br>
+                <i>(20 minutes)</i>
+
+                <p>Teams or individuals will each have 1 minute each to share a project they want to work on this week. If you want to share a project, add a slide to the Project Ideas and Updates slide deck prior to the start of Day 1.</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <i>Choose-your-own-adventure!</i> The rest of your day is free to work on projects and/or to follow along in the Guided Tutorial. Structure your time however you like. Feel free to communicate over slack, zoom, or whatever modes you prefer.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Tuesday</b><br>
+                9:30am PT<br>
+                12:30pm ET<br>
+                6:30pm CEST<br>
+              </td>
+              <td>
+                <i>Guided Tutorial:</i>
+                <b>Introduction to github for collaborative coding</b><br>
+                <u>Christina Hedges</u>
+                <i>(30 minutes + open-ended follow-up afterward)</i>
+
+                <ul>
+                  <li>How do you get and use someone else’s code?</li>
+                  <li>How do you submit an issue for a code you care about?</li>
+                  <li>How do you make your own code repository?</li>
+                  <li>How do you fork and contribute to a project?</li>
+                </ul>
+
+                <i>This tutorial will end with a homework assignment and an opportunity to join small breakout rooms to work with other participants.</i>
+              </td>
+            </tr>
+            <tr>
+              <th colspan="2">
+                <h3><br>Day 2 | Wednesday, June 23, 2021</h3>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <b>Wednesday</b><br>
+                8:00am PT<br>
+                11:00am ET<br>
+                5:00pm CEST<br>
+              </td>
+              <td>
+                <i>Talk:</i>
+                <b>How do we go from detector pixels to extracted stellar spectra?</b><br>
+                <u>Nicolas Crouzet</u>
+                <i>(25 + 5 minutes)</i>
+                <ul>
+                  <li>What data do the instruments record?</li>
+                  <li>What are the principles of careful spectral extraction?</li>
+                </ul>
+
+                <b>What lessons have we learned?</b><br>
+                <u>Laura Kreidberg</u>
+                <i>(10 + 5 minutes)</i>
+                <ul>
+                  <li>Photometry <i>Spitzer, Kepler, TESS, MOST</i></li>
+                  <li>Spectroscopy with Hubble + ground-based telescopes</li>
+                </ul>
+
+                <b>How can we engage with the official JWST calwebb pipeline?</b><br>
+                <u>Néstor Espinoza</u>
+                <i>(10 + 5 minutes)</i>
+                <ul>
+                  <li>How do we use existing STScI modules in our own code?</li>
+                  <li>How do we write new code that interacts well with the STScI pipeline tools?</li>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <center><i>5 minute break</i></center>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <i>Choose-your-own-adventure!</i> The rest of your day is free to work on projects and/or to follow along in the Guided Tutorial. Structure your time however you like. Feel free to communicate over slack, zoom, or whatever modes you prefer.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <b>Wednesday</b><br>
+                  9:05 am PT<br>
+                  12:05 pm ET<br>
+                  6:05 pm CEST<br>
+                </td>
+                <td>
+                  <i>Guided Tutorial:</i>
+                  <b>How do we go from detector pixels to extracted stellar spectra?</b><br>
+                  <u>Laura Kreidberg</u>
+                  <i>(45 minutes + open-ended follow-up afterward)</i><br>
+
+
+                  Participants will follow along to work simulated JWST NIRCam pixel-level data and walk through key steps in the spectral extraction, to determine the flux coming from the star as a function of wavelength and time. Steps covered will include:
+                  <ul>
+                    <li>reading calibrated JWST images</li>
+                    <li>measuring image diagnostics</li>
+                    <li>estimating background levels</li>
+                    <li>identifying and masking bad pixels</li>
+                    <li>defining the trace and extraction aperture</li>
+                    <li>extracting the spectrum</li>
+                    <li>converting pixel locations to wavelengths</li>
+                    <li>output spectroscopic light curves</li>
+                  </ul>
+
+                  <i>This tutorial will end with a homework assignment and an opportunity to join small breakout rooms to work with other participants.</i>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">
+                  <h3><br>Day 3 | Thursday, June 24, 2021</h3>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <b>Thursday</b><br>
+                  8:00am PT<br>
+                  11:00am ET<br>
+                  5:00pm CEST<br>
+                </td>
+                <td>
+                  <i>Talk:</i>
+                  <b>How do we go from stellar spectra to fitted planetary features?</b><br>
+                  <u>Hannah Wakeford</u>
+                  <i>(15 + 5 minutes)</i>
+                  <ul>
+                    <li>What is the observational challenge?</li>
+                    <li>How do Webb instruments compare to previous tools?</li>
+                    <li>Instrument systematics, cosmic rays, stellar variability</li>
+                    <li>What is a general recipe for fitting light curves?</li>
+                    <li>Why do we need multiple, independent reductions?</li>
+                  </ul>
+
+                  <i>Talk:</i>
+                  <b>What are physical models for transiting planets?</b><br>
+                  <u>Kevin Stevenson</u>
+                  <i>(8 + 2 minutes)</i>
+                  <ul>
+                    <li>Transits, eclipses, phase curves, limb-darkening</li>
+                    <li>What are the lightcurve ingredients?</li>
+                  </ul>
+                  <i>Panel Discussion:</i>
+                  <b>Instrumental Systematics</b><br>
+                  moderated by <u>Hannah Wakeford</u>
+                  <i>(30 minutes for panel)</i><br>
+                  Panelists Munazza Alam, Björn Benneke, Neale Gibson, and Laura Kreidberg will share their respective approaches towards fitting light curves and handling instrument systematics.
+                  Together they will comment on previously-unseen light curve plots, try to diagnose instrument systematics, explore the effects of red noise, and discuss philosophical and practical approaches.
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <center><i>5 minute break</i></center>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <i>Choose-your-own-adventure!</i> The rest of your day is free to work on projects and/or to follow along in the Guided Tutorial. Structure your time however you like. Feel free to communicate over slack, zoom, or whatever modes you prefer.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <b>Tuesday</b><br>
+                  9:05am PT<br>
+                  12:05pm ET<br>
+                  6:05pm CEST<br>
+                </td>
+                <td>
+                  <i>Guided Tutorial:</i>
+                  <b>How do we go from stellar spectra to fitted planetary features?</b><br>
+
+                  Different Guided Tutorials will be happening in parallel zoom breakout rooms. Feel free to join whichever feels most appropriate for you.
+
+                  <ul>
+                    <li><i>Option #1:</i> Fit a transit light curve <u>(Björn Benneke)</u></li>
+                    <li><i>Option #2:</i> Fit a transit light curve with complicated systematics, an introduction to Gaussian processes. <u>(Neale Gibson)</u></li>
+                  </ul>
+                  <i>Each tutorial will end with a homework assignment and an opportunity to join small breakout rooms to work with other participants.</i>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">
+                  <h3><br>Day 4 | Friday, June 25, 2021</h3>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <b>Friday</b><br>
+                  8:00am PT<br>
+                  11:00am ET<br>
+                  5:00pm CEST<br>
+                </td>
+                <td>
+                  <i>Hack Projects:</i>
+                  <b>What did folks do this week?</b><br>
+                  <i>(30 minutes)</i>
+
+                  <p>Participants will have 1-2 minutes each to celebrate what they did during the week, and any plans for further work throughout the rest of the summer. Slides should be added to the Day 4 deck before the start of this day.</p>
+
+                  <i>Discussion:</i>
+                  <b>What aspects of JWST data analysis are still confusing, hard, or scary for us?</b><br>
+                  <i>(20 minutes)</i><br>
+                  <p>Participants will split into small breakout rooms to discuss and populate a shared document, with an eye toward ERS and Cycle 1 observations with JWST.</p>
+
+                  <i>Wrap-up:</i>
+                  <b>Thanks and next steps!</b><br>
+                </td>
+              </tr>
+            </table>
+          </section>
+
+
+
+        </div>
+
+        <!-- Copyright -->
+        <div id="copyright">
+          <ul><li>&copy; Zach Berta-Thompson + ers-transit team</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
+
+      </div>
+
+      <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+
+    </body>
+    </html>
