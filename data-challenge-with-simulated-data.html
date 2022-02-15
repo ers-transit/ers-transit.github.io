@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<!--
+Massively by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>
+		The Transiting Exoplanet Community Early Release Science Program for JWST
+	</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53205207-2"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-53205207-2');
+	</script>
+</head>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<a name='ers-transit' />
+		<header id="header">
+			<a href="index.html" class="logo">ers-transit</a>
+		</header>
+
+		<!-- Nav -->
+		<!-- ZKBT: You need to copy/paste to propagate any changes
+		to this main menu throughout all the main pages.-->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html#ers-transit">About</a></li>
+				<li><a href="code-of-conduct.html#ers-transit">Code of Conduct</a></li>
+				<li class="active"><a href="workshops.html#ers-transit">Workshops</a></li>
+				<li><a href="talks.html#ers-transit">Talks</a></li>
+				<li><a href="resources.html#ers-transit">Resources</a></li>
+				<li><a href="contact.html#ers-transit">Contact</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://github.com/ers-transit" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Post -->
+			<section class="post">
+
+				<h2><i>Spring 2022:</i><br>ERS Post-Launch Data Challenge #1: Simulated Data</h2>
+				<p><span class="image right"><img src="images/hex-community.svg" align="top" alt="logo with cartoon people over hexagonal JWST mirror" /></span>
+
+
+					<p>The Transiting Exoplanet Community ERS team is conducting a data challenge exercise based on simulated data during the JWST commissioning period. The event will be held March 21-23, 2022 in-person at Baltimore, MD, USA and Heidelberg, Germany, with opportunities for remote online participation. This is an opportunity to try lots of different analyses and learn together as a community how to work with the new challenges that JWST data will present.</p>
+
+					<p><i>(The description below was published February 15, 2022.)</i></p>
+
+					<h4>Goals</h4>
+
+					The goals of this first post-launch Data Challenge are to:
+
+					<ol>
+
+						<li>Develop and exercise open-source tools for JWST data analysis to go from detector pixels to time-series stellar spectra</li>
+						<li>Develop and exercise open-source tools for JWST data analysis to go from time-series stellar spectra to fitted planetary features</li>
+						<li>Perform meaningful intercomparisons of analysis tools, including those developed by STScI</li>
+						<li>Compute planetary spectra and meta-data from simulated data, and make them available to community for retrieval studies</li>
+						<li>Generate draft analysis cookbooks with simulated data, as a practice run for incoming real data and the autumn program deliverables</li>
+
+					</ol>
+
+					<p>The ERS team will deliver simulated data products and participation guidelines to the community one month in advance of the Data Challenge gathering, giving individuals time to generate and deliver standard outputs and predefined benchmarks for comparing tools. The event itself will be a working meeting for comparing outputs, developing code, and generating analysis cookbooks.</p>
+
+					<h4>Key Dates</h4>
+
+					<ul>
+						<li><b>February 15, 2022:</b> Simulated data and participation instructions published.</li>
+						<li><b>March 14, 2022:</b> Members from the community submit their analysis results.  </li>
+						<li><b>March 21-23, 2022:</b> Participants meet in-person and online to discuss and improve analyses.</li>
+					</ul>
+
+					<p>Two geographical locations are planned for the in-person component of the Data Challenge: one at JHU in Baltimore, MD, USA and one at MPIA in Heidelberg, Germany. Virtual participation will be accommodated to the greatest extent possible. Everyone is encouraged to deliver analysis results regardless of whether or not they wish to attend the in-person meetings. In-person attendance will be capped, and plans are subject to change depending on COVID restrictions.  We will make every effort to ensure the safety of our in-person participants.  All attendees must be fully vaccinated and will likely be required to take rapid antigen tests each morning. Travel grants are available for a limited number of attendees, with requests made at the time of registration.</p>
+
+				</section>
+				<section class="post">
+					<h2>What simulated data are available?</h2>
+					<p>The ers-transit Data Simulation Working Group has produced a suite of data simulations for the Spring 2022 data challenge, designed to approximate the real datasets that will actually be gathered by JWST. These simulated datasets include injected planetary signals, they include outputs at multiple different processing steps, and they provide a good overall sense of the data products that expected for each instrument. Although the real observations will certainly contain unexpected features or aspects that are difficult to model from scratch, these simulations should serve as a useful starting place to develop, test, and compare your analysis methods.</p>
+
+					<h3>Types of Data Products</h3>
+					<p>For each simulated observation, data products are provided at various stages of processing. In general, the size of datasets decreases from least processed (raw ramp data) to most processed (extracted spectra or light curves).</p>
+
+					<ul>
+						<li><b>uncalibrated raw data (Stage 0)</b> = These are time-series sets of pixel images for individual readout groups, showing some or all of the non-destructive detector reads that make up each integration. (To learn about JWST’s language of frames, groups, integrations, and exposures, see <a href=https://jwst-docs.stsci.edu/understanding-exposure-times>Understanding Exposure Times</a>.) Minimal processing has been applied to these raw images. Files look like `*uncal.fits` and are multi-extension FITS images.</li>
+						<li><b>countrate images (Stage 1)</b> = These are time-series sets of pixel images for individual integrations, showing the rates at which photons hit the detector. These images are corrected for bias levels, dark current, and non-linearity, they have been checked for saturation, the reference pixel correction has been applied, and a slope has been fit to the individual groups within an integration (the “ramps-to-slopes” process). Files look like `*rateints.fits` and are multi-extension FITS images. </li>
+						<li><b>calibrated flux images (Stage 2)</b> = These are time-series sets of pixel images for individual integrations, with various additional calibrations applied. Visually, they will likely look very similar to countrate images, but pixels have been converted from photons/second to astrophysically calibrated flux units (MJy), each integration now has a wavelength solution assigned, and some trimming may have been applied. Files look like `*calints.fits`  and are multi-extension FITS images.</li>
+						<li><b>1D extracted time-series spectra (Stage 2 or 3)</b> = These are time-series sets of extracted stellar spectra for individual integrations. These represent the flux of the star-planet system as a function of wavelength and time. Integrated across any particular wavelength range, they would provide a light curve. Integrated across any particular time range, they would provide an average stellar spectrum. Files look like `*x1dints.fits`and are FITS binary tables. </li>
+						<li><b>integrated broadband light curves (Stage 3)</b> = These are text files containing columns for time and broadband, integrated, flux over the entire spectrum for each individual integration. These are the literal sums along the wavelength-axis of the 1D spectra contained in the `*x1dints.fits` files (described above). These files exist for both the spectroscopic and photometric (NIRCam only) data. Files look like `*.ecsv` and are Enhanced Character Separate Values text files.</li>
+					</ul>
+
+					<p>The `jwst` documentation <a href=https://jwst-pipeline.readthedocs.io/en/latest/jwst/data_products/science_products.html>Science Products</a> and <a href=https://jwst-pipeline.readthedocs.io/en/latest/jwst/data_products/product_types.html>Data Product Types</a> pages explain the formats of these files and what processing steps have likely gone into them. Néstor Espinoza’s talk from the ERS Pre-Launch Data Hackathon (<a href=https://ers-transit.github.io/talks/hackathon/ers-hackathon-day1-espinoza-what-to-expect.pdf>slides</a>, <a href=https://exoplanet-talks.org/talk/369>video</a>) provides a comprehensive pedagogical introduction to JWST datasets and the language used to describe them, with particular relevance to time-series observations and exoplanet datasets. </p>
+
+					<a id="simulated-observations"><h3>Simulated Observations</h3></a>
+						<p>All public datasets created by the Data Simulation Working Group are available through <a href=https://stsci.box.com/s/8r6kqh9m53jkwkff0scmed6zx42g307e>this Box folder</a>, including both those for the upcoming Spring 2022 Data Challenge and those from the previous Summer 2021 Pre-Launch Data Hackathon. The list below links directly to folders of simulated data for each of four simulated observations. Details about the inputs, assumptions, and processing are provided in README files associated with each simulated dataset. No login is required.</p>
+
+						<ul>
+							<li><b><a href=https://stsci.box.com/s/tyg3qqd85601gkbw5koowrx0obekeg0m>NIRISS | WASP-39b Transit</a></b>
+								<ul>
+									<li>A single transit</li>
+									<li>SOSS spectroscopy spanning 0.6-2.5 microns (SUBSTRIP256) at R~700</li>
+									<li>Available data products: Stage 0, 1, 2</li>
+								</ul></li>
+								<li><b><a href=https://stsci.box.com/s/f6ehe1i2tsn9dih8zl0emyvjm9vemh1r>NIRSpec | WASP-39b Transit</a></b>
+									<ul><li>A single transit</li>
+										<li>PRISM spectroscopy spanning 0.6-5.0 microns (SUB512) at R~100</li>
+										<li>Simulations were generated by injecting a transit signal into real cryo-vacuum test data from ground testing of the instrument</li>
+										<li>Available data products: Stage 1, 2</li>
+									</ul></li>
+									<li><b><a href=https://stsci.box.com/s/ctuol6orkulkrytbt7ajbd5653j93tg4>NIRCam | WASP-39b Transit</a></b>
+										<ul>
+											<li>A single transit.</li>
+											<li>F322W2 spectroscopy spanning 2.4-4.0 microns at R~1700, with simultaneous F210M filter photometry at 2.1 microns</li>
+											<li>Simulations were generated with and without additional systematics.</li>
+											<li>Available data products: Stage 0, 1, 2, 3</li>
+										</ul></li>
+										<li><b><a href=https://stsci.box.com/s/h662fiy3baw29ftulc9jxggoesq1u06y>MIRI | NGTS-10b Phase Curve</a></b>
+											<ul>
+												<li>A full planetary orbit, including one transit and two eclipses.</li>
+												<li>LRS spectroscopy spanning 5-12 microns at R~100.</li>
+												<li>Simulations were generated with and without detector pixel response drift.</li>
+												<li>Includes a nearby non-target star in the field of view.</li>
+												<li>Available data products: Stage 0, 1, 2.</li>
+											</ul></li>
+										</ul>
+
+										<h2>Data Showcase: How can you participate?</h2>
+										<p>This first post-launch ERS data challenge meeting is meant to serve as an opportunity for as many people as possible to start analyzing simulated data and preparing for the real JWST datasets that will be coming soon. We hope to engage as many scientists as possible in attempting independent analyses of the simulated datasets, to learn as much as we can as a community of JWST observers, and to discover areas where we  future. The March 21-23 event will focus primarily on the steps between detector pixels and fitted planetary features, but we welcome contributions focused on other tools, models, or observations relevant to the ERS program.
+
+											<img src=images/spring-2022-data-challenge-steps.png width=100% alt="visual outline of the three key steps of going from detector pixels to stellar spectra, from stellar spectra to fitted planetary features, and from fitted planetary features to inferred properties of planetary atmospheres">
+
+											<h3>Contribute a Draft Analysis:</h3>
+											<p>Everyone can participate in the “pixels-to-features” data challenge activities leading up to the March 21-23 meeting. We encourage you to try something, even if it’s not perfect. The more folks we have working on the simulated data, the more we’ll learn and the better prepared we will be for the real data when it arrives! Here’s what to do:</p>
+
+											<ol>
+												<li><b><a href=https://docs.google.com/forms/d/e/1FAIpQLSedN52V8hqQNmfC9paX3HhPtVRLdp_c_ZFhHBAD5T_74hvPkw/viewform?usp=sf_link>Register for the Spring 2022 Data Challenge with Simulated Data</a></b>. Even if you are not planning to synchronously attend the meeting, we will use the contact list from this form to communicate with everyone working on the datasets. (Late registrations are OK, except for in-person participants!)</li>
+												<li><b>Choose one or more simulated dataset(s)</b>. Pick a <a href=#simulated-observations>simulated observation</a> you are excited to work on, either because you want to contribute to the analysis of that observation for the ERS program or because you have another similar observation of your own and you want to become familiar with the data.</li>
+												<li><b>Choose one or more analysis step(s) that you want to attempt for that simulated observation.</b> Below, we describe a few <a href=#data-product-checkpoints>Data Product Checkpoints</a> in the process from detector pixels to fitted features. You can start and finish wherever you like, but if you work on more than one step, please consider submitting intermediate data products to line up with the checkpoints described below.</li>
+												<li><b>Join the #data-challenge channel on the ers-transit slack</b> to learn about updates and be able to discuss on-going issues with other members of the ers-team. Weekly online “studio sessions” will be organized for folks who want to work companionably on their data analysis efforts. If you're not on the ers-transit slack workspace, please <a href=contact.html>contact us</a>.</li>
+												<li><b>Submit your results by 14 March 2022</b>. Please submit the data products associated with your analysis step(s), along with any visualizations or descriptions of your results that will be helpful for others to follow your work. The <a href=#data-product-checkpoints>Data Product Checkpoints</a> defined below are the places at which your submitted results can be visualized, evaluated, and compared to injected signals.</li>
+											</ol>
+											<p>Our goal for this event is not to have all the perfect answers for the optimal method to analyze JWST data. Our goals are to explore and discover what we can. If the data products you submit are not perfect, that’s OK! We plan to include lots of time during the March 21-23 meeting for folks to discuss, learn, and work together to try to improve all our analyses!</p>
+
+											<a id="data-product-checkpoints"><h3>Data Product Checkpoints:</h3></a>
+											<p>The Data Challenge Working Group is assembling a suite of tests that can be applied at various checkpoints in the data analysis process. You can submit results at any of these checkpoints, and then the DCWG will generate visualizations and calculate data quality metrics for your submission. These are not meant to replace your own visualizations or characterizations of your methods; they are meant simply to provide an easy way to compare results to injected signals (wherever possible) and to look at multiple analyses in a uniform way. The following list summarizes the types of data analysis checkpoints that we hope to investigate. It will ease comparison if you match the requested file formats as closely as possible and include a short README with any submissions. More specific details about the exact formats for submission will be posted by March 1.</p>
+
+											<ul>
+												<li><b>countrate images</b> = If starting from raw uncalibrated data, what per-integration countrate images are produced? What are the detector noise levels, what fractions of pixels identified as bad or cosmic rays, and what spatially or temporally correlated background trends are present? <i><b>You can submit:</b> a collection of countrate images. These should be equivalent to `*rateints` files, containing values and uncertainties in units of DN/second. (One particular data segment file will be suggested as a testbed for this checkpoint.)</i></li>
+
+												<li><b>background-subtracted countrate images</b> = One area of particular concern for extracting spectra is understanding how to most accurately subtract image backgrounds caused by astrophysical flux and/or detector noise patterns. <i><b>You can submit:</b> a collection of countrate images with the backgrounds subtracted from them. These should be equivalent to `*rateints` files, containing values and uncertainties in units of DN/second. (One particular data segment file will be suggested as a testbed for this checkpoint.)</i></li>
+
+												<li><b>1D extracted time-series spectra</b> = If starting from countrate images and/or calibrated flux images, what time-series stellar spectra are produced? What is the precision of the extracted flux across time and wavelength, how accurate are the fluxes, what correlations across time or wavelength are present in the noise, and how common are outliers? <i><b>You can submit:</b> a collection of time-series extracted spectra, including flux values and uncertainties for each wavelength and time (= integration) in the original dataset. Your data may optionally include additional metadata or time-series diagnostics. Any flux units are allowed (including normalized to unity), as long as they are consistent between the flux and its uncertainty. The <a href=https://zkbt.github.io/chromatic/>chromatic</a> package will be used to load your submissions; please submit in a file format for which a <a href=https://zkbt.github.io/chromatic/io/>file-reader</a> already exists or work with the DCWG to implement a new reader for your specific format.</i></li>
+
+											</ul>
+											<p>The extracted time-series 1D spectra for JWST instruments have hundreds to thousands of wavelengths. For some datasets, it may be useful to fit transit features at high spectral resolution, for this event we ask that you bin the data onto a coarser grid of wavelength bins to simplify fitting and comparison. Please use the following wavelength grids (all of which amount to “binning together by N pixels”):</p>
+											<i><ul><ul><ul>
+												<li>NIRISS | WASP-39b Transit = (coming March 1 for first and second order)</li>
+												<li>NIRSpec | WASP-39b Transit = (coming March 1)</li>
+												<li>NIRCam | WASP-39b Transit = (coming March 1)</li>
+												<li>MIRI | NGTS-10b Phase Curve = (coming March 1)</li>
+											</ul></ul></ul></i>
+											<ul>
+												<li><b>binned light curves and residuals</b> = After binning spectra into wavelength bins, what do the light curves look like and how well can they be modeled? What is the noise like, how many outliers are there, what systematics are present, and how well can models capture all aspects of the data? <i><b>You can submit:</b> a collection of wavelength-binned light curves to which some model has been fit. These should be a text file (or collection of text files) containing time, per-wavelength fluxes, per-wavelength flux uncertainties, and per-wavelength residuals from the fitted model. Example outputs will be made available to serve as a reference for file formats, by March 1.</i></li>
+
+												<li><b>fitted planetary features</b> = If starting from time-series spectra, what wavelength-dependent planetary features (transit depths, eclipse depths, or phase curve amplitudes/offsets) do we infer? With what precision and accuracy do fitted features match the signals that were injected? <i><b>You can submit:</b>  a collection of wavelength-dependent transit depths or eclipse depths, depending on the dataset being modeled, along with their uncertainties. Transit depths should be submitted as (Rp/Rs)^2 = the square of the planet-to-star radius ratio, and eclipse depths should be submitted as (Fp/Fs) = the ratio of planet and star fluxes reaching our telescope.</i></li>
+											</ul>
+
+											<h3>Other Submissions:</h3>
+											<p>You may want to contribute to this Data Challenge in a way that doesn’t neatly fall into the categories or checkpoints described above. The ERS team values creative and thoughtful contributions in areas that we did not necessarily plan. As such, there is a general opportunity to submit plots, animations, cartoons, illustrations, infographics, artwork, or any other kind of creative contribution that’s relevant to the ers-transit science program. At the March 21-23 events, we will showcase and celebrate your submissions!</p>
+
+										</section>
+									</div>
+
+									<!-- Copyright -->
+									<div id="copyright">
+										<ul><li>&copy; Zach Berta-Thompson + ers-transit team</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+									</div>
+
+								</div>
+
+								<!-- Scripts -->
+								<script src="assets/js/jquery.min.js"></script>
+								<script src="assets/js/jquery.scrollex.min.js"></script>
+								<script src="assets/js/jquery.scrolly.min.js"></script>
+								<script src="assets/js/browser.min.js"></script>
+								<script src="assets/js/breakpoints.min.js"></script>
+								<script src="assets/js/util.js"></script>
+								<script src="assets/js/main.js"></script>
+
+							</body>
+							</html>
