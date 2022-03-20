@@ -64,7 +64,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 					<p>The Transiting Exoplanet Community ERS team is conducting a data challenge exercise based on simulated data during the JWST commissioning period. The event will be held March 21-23, 2022 in-person at Baltimore, MD, USA and Heidelberg, Germany, with opportunities for remote online participation. This is an opportunity to try lots of different analyses and learn together as a community how to work with the new challenges that JWST data will present.</p>
 
-					<p><i>(The description below was last updated March 8, 2022.)</i></p>
+					<p><i>(The description below was last updated March 20, 2022.)</i></p>
 
 					<h4>Goals</h4>
 
@@ -80,20 +80,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 					</ol>
 
-					<p>The ERS team will deliver simulated data products and participation guidelines to the community one month in advance of the Data Challenge gathering, giving individuals time to generate and deliver standard outputs and predefined benchmarks for comparing tools. The event itself will be a working meeting for comparing outputs, developing code, and generating analysis cookbooks.</p>
-
-					<h4>Key Dates</h4>
-
-					<ul>
-						<li><b>February 15, 2022:</b> Simulated data and participation instructions published.</li>
-						<li><b>March 14, 2022:</b> Members from the community submit their analysis results.  </li>
-						<li><b>March 21-23, 2022:</b> Participants meet in-person and online to discuss and improve analyses.</li>
-					</ul>
-
 					<h4>Agenda + Local Logistics</h4>
-					<p>The draft agenda for the March 21-23, 2022 meeting is <b><a href=https://docs.google.com/document/d/1P-ubmGIZdVRA8rjbBTBTZG9AeQAYePZbpMYk-BmTmX4/edit?usp=sharing>available here</a></b>, covering participants in Baltimore, Heidelberg, and online. (It might still change a bit, but the gist is there.)</p>
+					<p>The agenda for the March 21-23, 2022 meeting is <b><a href=https://docs.google.com/document/d/1P-ubmGIZdVRA8rjbBTBTZG9AeQAYePZbpMYk-BmTmX4/edit?usp=sharing>available here</a></b>, covering participants in Baltimore, Heidelberg, and online. Most of the time is budgeted for open work, so you can get whatever you want out of the week!</p>
 
-					<p>Local logistics information for in-person Baltimore attendees has been emailed to all registered Baltimore participants, and a summary is <b><a href='spring-2022-baltimore-logistics.pdf'>available here</a></b>. Local logistics information for in-person Heidelberg attendees has been emailed to all registered Heidelberg participants. Connection information for remote participants will be shared over slack and email to all regstrants.</p>
+					<p>Local logistics information for in-person Baltimore attendees has been emailed to all registered Baltimore participants, and a summary is <b><a href='spring-2022-baltimore-logistics.pdf'>available here</a></b>. Local logistics information for in-person Heidelberg attendees has been emailed to all registered Heidelberg participants. Connection information for remote participants has been shared over slack and email to all registrants.</p>
 
 				</section>
 				<section class="post">
@@ -101,8 +91,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 					<p>The ers-transit Data Simulation Working Group has produced a suite of data simulations for the Spring 2022 data challenge, designed to approximate the real datasets that will actually be gathered by JWST. These simulated datasets include injected planetary signals, they include outputs at multiple different processing steps, and they provide a good overall sense of the data products that expected for each instrument. Although the real observations will certainly contain unexpected features or aspects that are difficult to model from scratch, these simulations should serve as a useful starting place to develop, test, and compare your analysis methods.</p>
 
 					<h3>Types of Data Products</h3>
-					<p>For each simulated observation, data products are provided at various stages of processing. In general, the size of datasets decreases from least processed (raw ramp data) to most processed (
-						spectra or light curves).</p>
+					<p>For each simulated observation, data products are provided at various stages of processing. In general, the size of datasets decreases from least processed (raw ramp data) to most processed (spectra or light curves).</p>
 
 					<ul>
 						<li><b>uncalibrated raw data (Stage 0)</b> = These are time-series sets of pixel images for individual readout groups, showing some or all of the non-destructive detector reads that make up each integration. (To learn about JWST’s language of frames, groups, integrations, and exposures, see <b><a href=https://jwst-docs.stsci.edu/understanding-exposure-times>Understanding Exposure Times</a></b>.) Minimal processing has been applied to these raw images. Files look like `*uncal.fits` and are multi-extension FITS images.</li>
